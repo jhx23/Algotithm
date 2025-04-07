@@ -24,24 +24,15 @@ public class Q3 {
             double A = sc.nextDouble();
             double B = sc.nextDouble();
 
-            double min,max;
-            if (A < B) {
-                min = A;
-                max = B;
-            } else {
-                min = B;
-                max = A;
-            }
-            double lowerBound = min * 1.6;
-            double upperBound = max * 1.63;
+            double min = Math.min(A, B);
+            double max = Math.max(A, B);
 
-            if (max >= lowerBound && max <= upperBound) {
+            if (max >= min * 1.6 && max <= min * 1.63) {
                 count++;
             }
         }
         System.out.println(count);
 
         sc.close();
-
     }
 }
