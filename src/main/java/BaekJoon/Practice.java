@@ -5,8 +5,8 @@ import java.util.Scanner;
 
 public class Practice {
     public static void main(String[] args) {
-        Scanner s = new Scanner(System.in);
-        int year = s.nextInt();
-        System.out.println((year % 4 == 0 && year % 100 != 0) || year % 400 == 0 ? 1 : 0);
+        Scanner sc = new Scanner(System.in);
+        String id = sc.nextLine();  // 아이디 입력 받기
+        System.out.println(id + "??!");
     }
 }
