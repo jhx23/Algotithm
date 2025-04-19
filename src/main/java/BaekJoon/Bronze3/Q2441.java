@@ -1,7 +1,7 @@
 package BaekJoon.Bronze3;
 
 /*문제 번호 : 2441
-문제 이름 : 별 찍기 -4 */
+문제 이름 : 별 찍기 - 4 */
 
 import java.util.Scanner;
 
