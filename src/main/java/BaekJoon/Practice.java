@@ -6,7 +6,15 @@ import java.util.Scanner;
 public class Practice {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        String id = sc.nextLine();  // 아이디 입력 받기
-        System.out.println(id + "??!");
+        int N = sc.nextInt();
+        int count = N / 4;
+
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < count; i++) {
+            sb.append("long ");
+        }
+        sb.append("int");
+
+        System.out.println(sb.toString());
     }
 }
