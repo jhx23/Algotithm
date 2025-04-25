@@ -3,31 +3,30 @@ package Goorm.기초시뮬레이션;
  * 빵야
  */
 import java.io.*;
+import java.util.*;
 
 public class Q3 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-
         int N = Integer.parseInt(br.readLine());
-        String[] input = br.readLine().split(" ");
+        StringTokenizer st = new StringTokenizer(br.readLine());
+
         int[] H = new int[N];
+        for (int i = 0; i < N; i++) {
+            H[i] = Integer.parseInt(st.nextToken());
+        }
+
+        long totalShots = 0;
+        int ct = 0;
 
         for (int i = 0; i < N; i++) {
-            H[i] = Integer.parseInt(input[i]);
-        }
-
-        int count = 0;
-        int enemy = 0;
-        while (enemy < N) {
-            count++;
-            int damage = ((count - 1) % 4) + 1;
-
-            H[enemy] -= damage;
-
-            if (H[enemy] <= 0) {
-                enemy++;
+            while (H[i] > 0) {
+                int damage = (ct % 4) + 1;
+                H[i] -= damage;
+                ct++;
+                totalShots++;
             }
         }
-        System.out.println(count);
+        System.out.println(totalShots);
     }
 }
